@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-"""
-VLESS Checker PRO
-Оригинальный дизайн HTML + меню + авто-копирование + статистика + звук
-Основной вывод — working_keys.html
-"""
-
 import asyncio
 import base64
 import html as html_module
@@ -28,7 +21,7 @@ from rich import box
 
 console = Console()
 
-# Нейтральный User-Agent — не палит название инструмента
+
 _UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 _SESSION = requests.Session()
 _SESSION.headers.update({
@@ -53,7 +46,7 @@ def get_desktop_path() -> Path:
 
 HTML_OUTPUT = get_desktop_path() / "working_keys.html"
 
-# === ИСТОЧНИКИ ===
+
 BLACK_URL = "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_VLESS_RUS.txt"
 BLACK_MOBILE_URL = "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_VLESS_RUS_mobile.txt"
 WHITE_URL = "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/WHITE-CIDR-RU-checked.txt"
@@ -88,7 +81,7 @@ COUNTRY_PATTERN = re.compile(
 )
 
 
-# === ЗВУК ===
+
 def play_beep():
     try:
         if sys.platform == "win32":
@@ -100,7 +93,7 @@ def play_beep():
         pass
 
 
-# === БУФЕР ОБМЕНА ===
+
 def copy_to_clipboard(text: str) -> bool:
     try:
         import pyperclip
@@ -124,7 +117,7 @@ def copy_to_clipboard(text: str) -> bool:
         return False
 
 
-# === МЕНЮ + БАННЕР (оригинальный стиль) ===
+
 def show_menu() -> Dict[str, Any]:
     console.clear()
     banner = """
@@ -193,7 +186,7 @@ def show_menu() -> Dict[str, Any]:
     return settings
 
 
-# === ЛОГИКА ===
+
 def fetch_keys(url: str) -> List[str]:
     try:
         resp = _SESSION.get(url, timeout=15)
@@ -299,7 +292,7 @@ async def check_mode_async(
     }
 
 
-# === HTML — ТОЧНО ОРИГИНАЛЬНЫЙ ДИЗАЙН ===
+
 def generate_html_report(results: dict):
     cards_html = ""
     animation_delay = 0.1
