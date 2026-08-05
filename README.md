@@ -1,11 +1,11 @@
-# ⚡ VLESS Checker — Async Network Benchmark & Analyzer
+# ⚡ VPNChecker — Async Network Benchmark & Analyzer
 
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Asyncio](https://img.shields.io/badge/asyncio-enabled-brightgreen.svg)
 ![Network Tool](https://img.shields.io/badge/category-Network%20Benchmark-orange.svg)
 
-**VLESS Checker PRO** — это высокопроизводительная асинхронная утилита на Python для комплексного тестирования сетевых соединений, замера точной TCP-латентности удаленных узлов и автоматической генерации интерактивных веб-дашбордов. Проект демонстрирует продвинутые паттерны параллельного программирования (`asyncio`), работу с сетевыми сокетами на уровне ядра и проектирование консольных интерфейсов.
+**VPNChecker** — это высокопроизводительная асинхронная утилита на Python для комплексного тестирования сетевых соединений, замера точной TCP-латентности удаленных узлов и автоматической генерации интерактивных веб-дашбордов. Проект демонстрирует продвинутые паттерны параллельного программирования (`asyncio`), работу с сетевыми сокетами на уровне ядра и проектирование консольных интерфейсов.
 
 ---
 
